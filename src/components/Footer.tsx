@@ -29,7 +29,7 @@ const searchEngineNames = SearchEngineNames.join(', ')
 const Footer: React.FC = () => {
   const classes = useStyles()
 
-  return ()
+  return (<footer></footer>)
 }
 
 export default Footer

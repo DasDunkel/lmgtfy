@@ -28,7 +28,7 @@ const IndexPage: React.FC = () => {
       <SEO />
 
       <BodySection>
-        <Shout>Let me REALLY Google that for you</Shout>
+        <Shout>Let me Google that for you</Shout>
         <Paragraph>
           A version of{' '}
           <Link target="_blank" title="Let me Google that for you" url="https://lmgtfy.app/">

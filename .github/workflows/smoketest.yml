@@ -164,30 +164,30 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Restore Gatsby cache
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: gatsbyCache
         with:
           path: ./.cache
           key: ${{ runner.os }}-gatsby-cache-${{ hashFiles('yarn.lock') }}
 
       - name: Restore Gatsby output
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: gatsbyOut
         with:
           path: ./public
           key: ${{ runner.os }}-gatsby-out-${{ hashFiles('yarn.lock') }}-${{ github.sha }}
 
       - name: Upload a compiled website
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: Compiled website
           path: public/
 
       - name: Deploy to GitHub Pages 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.0
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: prod
           folder: public

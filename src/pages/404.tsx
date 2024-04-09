@@ -24,7 +24,7 @@ const IndexPage: React.FC = () => {
       <SEO title="Page not found" />
 
       <Shout noPadding className={classes.heading}>
-        Let me REALLY Google that for you
+        Let me Google that for you
       </Shout>
 
       <BodySection>

@@ -30,7 +30,6 @@ const GatsbySsrHtmlTemplate: React.FC<Props> = props => {
 
         {/* <!-- Search Engine --> */}
         <meta name="description" content={DESCRIPTION} />
-        <meta name="image" content={imageUrl} />
         {/* <!-- Schema.org for Google --> */}
         <meta itemProp="name" content={title} />
         <meta itemProp="description" content={DESCRIPTION} />

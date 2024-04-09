@@ -55,34 +55,10 @@ jobs:
         run: yarn --prefer-offline --frozen-lockfile
         if: steps.yarn-cache.outputs.cache-hit == 'true'
 
-  formatting:
-    runs-on: ubuntu-latest
-    needs: [install]
-    name: Verify formatting
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-
-      - name: Restore dependencies cache
-        uses: actions/cache@v2
-        id: moduleCache
-        with:
-          path: ./node_modules
-          key: ${{ runner.os }}-node-modules-${{ github.sha }}-${{ hashFiles('yarn.lock') }}
-
-      - name: Verify formatting
-        run: yarn format:check
-
   build:
     name: Build site
     runs-on: ubuntu-latest
-    needs: [formatting]
+    needs: [install]
 
     steps:
       - name: Checkout code

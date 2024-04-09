@@ -16,7 +16,7 @@ const prodPlugins = !__IS_DEV__
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://lmrgtfy.davwheat.dev`,
+    siteUrl: `https://lmgtfy.dunk.dev`,
   },
   plugins: [
     ...prodPlugins,
@@ -37,8 +37,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Let me really Google that for you`,
-        short_name: `LMRGTFY`,
+        name: `Let me Google that for you`,
+        short_name: `LMGTFY`,
         start_url: `/`,
         background_color: `#2196f3`,
         theme_color: `#2196f3`,

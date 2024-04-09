@@ -3,8 +3,6 @@
  */
 
 import React from 'react'
-import packageJson from '../package.json'
-
 
 interface Props {
   htmlAttributes: Record<string, unknown>

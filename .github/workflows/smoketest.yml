@@ -38,7 +38,7 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Restore node_modules
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: moduleCache
         with:
           path: ./node_modules
@@ -62,7 +62,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           persist-credentials: false
 
@@ -72,14 +72,14 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Restore dependencies cache
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: moduleCache
         with:
           path: ./node_modules
           key: ${{ runner.os }}-node-modules-${{ github.sha }}-${{ hashFiles('yarn.lock') }}
 
       - name: Restore Gatsby cache
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: gatsbyCache
         with:
           path: ./.cache
@@ -88,7 +88,7 @@ jobs:
             ${{ runner.os }}-gatsby-cache-
 
       - name: Restore Gatsby build output
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: gatsbyOut
         with:
           path: ./public
@@ -107,7 +107,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v2
@@ -115,14 +115,14 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Restore dependencies cache
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: moduleCache
         with:
           path: ./node_modules
           key: ${{ runner.os }}-node-modules-${{ github.sha }}-${{ hashFiles('yarn.lock') }}
 
       - name: Restore Gatsby cache
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: gatsbyCache
         with:
           path: ./.cache
@@ -140,17 +140,17 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Restore Gatsby cache
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: gatsbyCache
         with:
           path: ./.cache
           key: ${{ runner.os }}-gatsby-cache-${{ hashFiles('yarn.lock') }}
 
       - name: Restore Gatsby output
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: gatsbyOut
         with:
           path: ./public

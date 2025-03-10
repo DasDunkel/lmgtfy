@@ -157,7 +157,7 @@ jobs:
           key: ${{ runner.os }}-gatsby-out-${{ hashFiles('yarn.lock') }}-${{ github.sha }}
 
       - name: Upload a compiled website
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: Compiled website
           path: public/

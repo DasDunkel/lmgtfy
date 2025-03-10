@@ -42,6 +42,8 @@ const GatsbySsrHtmlTemplate: React.FC<Props> = props => {
         <meta name="og:locale" content="en_GB" />
         <meta name="og:type" content="website" />
 
+        <script defer src="https://umami.dunk.dev/benis" data-website-id="40479b6a-fda8-42a4-bcf8-8a06be810507" data-domains="lmgtfy.dunk.dev"></script>
+
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>

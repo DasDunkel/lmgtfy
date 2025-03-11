@@ -52,7 +52,7 @@ const EnterSearchQuery: React.FC<Props> = ({ searchQuery, searchEngineId }) => {
       </BodySection>
       <TextContainer center>
         <Whisper inline>
-          <Link url={finalSearchUrl}>Skip animation &gt;</Link>
+          <Link data-umami-event="SkipAnimation" url={finalSearchUrl}>Skip animation &gt;</Link>
         </Whisper>
       </TextContainer>
     </>

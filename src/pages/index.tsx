@@ -31,7 +31,7 @@ const IndexPage: React.FC = () => {
         <Shout>Let me Google that for you</Shout>
         <Paragraph>
           A version of{' '}
-          <Link target="_blank" title="Let me Google that for you" url="https://lmgtfy.app/">
+          <Link target="_blank" title="Let me Google that for you" url="https://lmgtfy.dunk.dev/">
             LMGTFY
           </Link>{' '}
           without ads or trackers, and that actually uses Google (or DuckDuckGo if you prefer).

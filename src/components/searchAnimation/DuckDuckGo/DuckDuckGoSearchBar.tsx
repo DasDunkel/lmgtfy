@@ -105,7 +105,7 @@ const DuckDuckGoSearchBox: React.FC<Props> = ({ value, buttonId, onSearchButtonC
     <div id={id} className={classes.root}>
       <input placeholder="Search the web without being tracked" className={classes.searchBox} type="text" readOnly value={value} />
       <Tooltip classes={{ tooltip: classes.clickTooltip }} placement="bottom" arrow open={!!showClickTooltip} title="Click this!">
-        <button className={classes.searchButton} onClick={onSearchButtonClicked} id={buttonId}>
+        <button data-umami-event="DuckduckgoSearch" className={classes.searchButton} onClick={onSearchButtonClicked} id={buttonId}>
           <SearchIcon className={classes.searchButtonIcon} />
         </button>
       </Tooltip>

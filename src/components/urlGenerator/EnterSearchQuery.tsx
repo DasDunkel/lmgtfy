@@ -80,7 +80,7 @@ const EnterSearchQuery: React.FC = () => {
             endAdornment: !lmrgtfyUrl ? null : (
               <InputAdornment position="end">
                 <Tooltip title="Copy link">
-                  <IconButton aria-label="copy link" onClick={() => copy(urlTextBoxRef.current.value)} edge="end">
+                  <IconButton data-umami-event="Copy link" aria-label="copy link" onClick={() => copy(urlTextBoxRef.current.value)} edge="end">
                     <CopyIcon />
                   </IconButton>
                 </Tooltip>

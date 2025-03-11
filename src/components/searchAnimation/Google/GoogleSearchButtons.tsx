@@ -51,11 +51,11 @@ const GoogleSearchButtons: React.FC<Props> = ({ onSearchButtonClicked, id, showC
   return (
     <div className={classes.root}>
       <Tooltip classes={{ tooltip: classes.clickTooltip }} placement="left" arrow open={!!showClickTooltip} title="Click this!">
-        <button id={id} className={classes.button} onClick={onSearchButtonClicked}>
+        <button data-umami-event="GoogleSearch" id={id} className={classes.button} onClick={onSearchButtonClicked}>
           Google Search
         </button>
       </Tooltip>
-      <button className={classes.button} onClick={onSearchButtonClicked}>
+      <button data-umami-event="GoogleFeelingLucky" className={classes.button} onClick={onSearchButtonClicked}>
         I'm Feeling Lucky
       </button>
     </div>
